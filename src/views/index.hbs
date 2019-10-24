@@ -1,16 +1,30 @@
 <div class="card">
-  <div class="card-header">
-    Quote
+  <div class="card-header bg-dark text-white">
+    <h3 class="card-title">
+      <i class="far fa-image"></i> Subir Imagen
+    </h3>
   </div>
   <div class="card-body">
-    <div class="input-group mb-3">
-    <div class="custom-file">
-        <input type="file" class="custom-file-input" id="inputGroupFile02">
-        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-    </div>
-    <div class="input-group-append">
-        <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-    </div>
-    </div>
+     <form action="/images" method="POST">
+     <div class="form-gruop pb-3">
+       <div class="input-gruop">
+         <div class="custom-file">
+           <input type="file" name="image" class="custom-file-input" id="inputGroup" aria-describedby="inputGroupFileAddon" required> 
+           <label class="custom-file-label" for="inputGrupFile">Elige tu Archivo</label>
+         </div>
+       </div>
+     </div>
+     <div class="form-group">
+       <input type="text" name="title" class="form-control" placeholder="Titulo de la imagen" required>
+     </div>
+     <div class="form-group">
+       <textarea name="description" class="form-control" rows="2" placeholder="Descripcion" required></textarea>
+     </div>
+     <div class="form-group">
+       <button class="btn btn-success">
+         <i class="fa fa-upload"></i> Subir Imagen
+       </button>
+     </div>
+     </form>
   </div>
 </div>
